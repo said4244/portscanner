@@ -8,10 +8,10 @@ import time
 
 subprocess.call('cls', shell=True)
 
-host = input('Enter The IPV4 Of The Target: ') # ipv4 of the target where i want to perform a port scan
+host = input('Vul in de IPv4 van het doelwit: ') # ipv4 van de doelwit, die er gescant gaat worden
 
 print("-"*60)
-print('Please Wait, We Are Scanning The Targets Ports.....')
+print('Even wachten, we zijn de poorten aan het scannen.....')
 print("-"*60)
 
 t1 = datetime.now()
@@ -31,11 +31,11 @@ except KeyboardInterrupt:
 	sys.exit()
 
 except socket.gaierror:
-	print("The Given IPV4 Could Not Be found")
+	print("de gegeven IPv4 kan niet gevonden worden")
 	sys.exit()
 
 except socket.error:
-	print("Could Not Connect To The Server")
+	print("Kan niet connecten met de server :(")
 	sys.exit()
 
 t2 = datetime.now()
